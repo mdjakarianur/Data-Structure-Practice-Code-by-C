@@ -61,6 +61,7 @@ int main(){
     printf("Enter array element size: ");
     scanf("%d",&size);
     int arr[size];
+    
     printf("Enter %d array element: ", size);
     for(i=0;i<size;i++){
         scanf("%d",&arr[i]);
