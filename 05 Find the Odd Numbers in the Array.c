@@ -3,7 +3,8 @@ int main(){
 int i, size;  
 printf("Enter any array size: ");  
 scanf(“%d”,&size); 
-int arr[size];  
+int arr[size];
+    
 printf("Enter %d numbers: ", size);  
 for(i=0; i<size; i++){  
 scanf("%d", &arr[i]);
