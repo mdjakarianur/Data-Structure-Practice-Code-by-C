@@ -2,8 +2,7 @@
 int top = -1;
 int stack[5];
 int isFull(){
-    if (top==4)
-    {
+    if (top==4){
         return 1;
     }
     else
@@ -38,6 +37,11 @@ void pop(){
         return;
     }
     printf("Popped: %d\n",stack[top]);
+    
+    int arr2[5];
+    for(int i=0;i<5;i++){
+    arr2[i]=stack[top];
+    }
     top=top-1;
 }
 void print(){
@@ -52,25 +56,32 @@ void print(){
         printf("%d\n", stack[i]);
     }
 }
-int main()
-{
-    push(1);
-    push(2);
-    push(3);
-    push(4);
-    push(5);
+int main(){
+    int i,size;
+    printf("Enter array element size: ");
+    scanf("%d",&size);
+    int arr[size];
+    printf("Enter %d array element: ", size);
+    for(i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("\nArray element are: \n");
+    for(i=0;i<size;i++){
+        printf("%d ",arr[i]);
+    }
+    printf("\n\n");
+    for(i=0;i<size;i++){
+        push(arr[i]);
+    }
     print();
-    pop();
-    print();
-    pop();
-    print();
-    push(6);
-    print();
-    pop();
-    pop();
-    pop();
-    pop();
-    print();
-  
+    for(i=0;i<size;i++){
+        pop(arr[i]);
+    }
+    
+    printf("\nReverse Array element are: \n");
+    for(i=size-1;i>=0;i--){
+        printf("%d ",arr[i]);
+    }
+    
 return 0;
 }
