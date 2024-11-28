@@ -32,8 +32,7 @@ void push(int data){
     stack[top] = data;
 }
 void pop(){
-    if(isEmpty())
-    {
+    if(isEmpty()) {
         printf("Stack is empty!\n");
         return;
     }
