@@ -23,7 +23,7 @@ void appendNode(struct Node** head, int data) {
     struct Node* temp = *head;
     while (temp->next != NULL) {
         temp = temp->next;
-    }
+     }
     temp->next = newNode;
 }
 
