@@ -8,6 +8,7 @@ printf("Enter %d numbers: ", size);
 for(i=0; i<size; i++){  
 scanf("%d", &arr[i]);
 }
+    
 printf("The array elements are: \n");
     for(i=0;i<size;i++){
         printf("%d ", arr[i]); 
