@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main() {
+int main(){
     int num1, num2, sum;
     int *ptr1, *ptr2;
   
