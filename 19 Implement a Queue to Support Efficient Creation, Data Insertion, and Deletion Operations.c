@@ -36,8 +36,7 @@ void enqueue(int data){
     queue[rear] = data;
 }
 void dequeue(){
-    if (isEmpty())
-    {
+    if (isEmpty()) {
         printf("Queue is empty!\n");
         return;
     }
