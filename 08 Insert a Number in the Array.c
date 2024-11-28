@@ -21,8 +21,7 @@ int main()
     }
     arr[position-1]=value;
 printf("The Array Element After Insertion: \n");
-    for(i=0;i<size+1;i++)
-    {
+    for(i=0;i<size+1;i++){
         printf("%d ", arr[i]); 
     }
     return 0;
