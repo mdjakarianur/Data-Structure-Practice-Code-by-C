@@ -6,6 +6,7 @@ int main(){
     for(int i = 0; i<len ; i++){
         printf("%d ",arr[i]);
     }
+    
     int value,position;
     printf("\nEnter the position do you want to replacement : ");
     scanf("%d",&position);
