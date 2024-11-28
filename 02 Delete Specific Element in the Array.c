@@ -7,10 +7,12 @@ int main() {
     for(i=0;i<size;i++){
     scanf("%d", &arr[i]);
     }
+    
     printf("The Array Element Are: \n");
     for(i=0;i<size;i++){
         printf("%d ", arr[i]); 
     }
+    
     printf("\nEnter the position you want to delete: ");
     scanf("%d", &position);
     for(i=position-1;i<=size-2;i++){
@@ -18,9 +20,9 @@ int main() {
     }
         arr[size-1]=0;
     printf("The Array Element Atfer Deletion: \n");
-    for(i=0;i<size-1;i++)
-    {
+    for(i=0;i<size-1;i++){
         printf("%d ", arr[i]); 
     }
+    
     return 0;
 }
