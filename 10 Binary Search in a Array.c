@@ -39,5 +39,6 @@ printf("The array elements are: \n");
 if(minimum>maximum){
     printf("Element not found.");
     }
+  
   return 0;
 }
