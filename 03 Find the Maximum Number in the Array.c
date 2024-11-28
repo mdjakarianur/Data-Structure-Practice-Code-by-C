@@ -14,13 +14,13 @@ printf("The array element are: \n");
     }
 printf("\nThe maximum mumber is: ");  
 int maximum = arr[0];  
-for(i=1; i<size; i++)
-{  
+for(i=1; i<size; i++){  
 if(arr[i] > maximum)
     {
      maximum=arr[i];
     }
 }  
 printf("%d", maximum);  
+    
 return 0;
 }
