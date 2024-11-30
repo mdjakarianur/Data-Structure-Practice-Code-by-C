@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int i, size, isSorted = 1;
+    int i, size, isSorted = 0;
 
     printf("Enter the size of the array: ");
     scanf("%d", &size);
@@ -17,12 +17,12 @@ int main() {
     }
     for (i = 1; i < size; i++) {
         if (arr[i] < arr[i - 1]) {
-            isSorted = 0;
+            isSorted = 1;
             break;
         }
     }
 
-    if (isSorted) {
+    if (isSorted==0) {
         printf("\nThe array is sorted in ascending order.\n");
     } else {
         printf("\nThe array is not sorted.\n");
