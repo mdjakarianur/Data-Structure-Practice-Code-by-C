@@ -1,8 +1,9 @@
 #include<stdio.h>
+#define stack_size 100
 int top = -1;
-int stack[5];
+int stack[stack_size];
 int isFull(){
-    if (top==4){
+    if (top==stack_size-1){
         return 1;
     }
     else
@@ -26,36 +27,21 @@ void push(int data){
         printf("Stack Overflow!\n");
         return;
     }
-
-    top = top+1;
+    top++;
     stack[top] = data;
 }
-void pop(){
+
+
+int pop(){
     if(isEmpty())
     {
         printf("Stack is empty!\n");
-        return;
+        return 1;
     }
-    printf("Popped: %d\n",stack[top]);
-    
-    int arr2[5];
-    for(int i=0;i<5;i++){
-    arr2[i]=stack[top];
-    }
-    top=top-1;
+    printf("Popped element: %d\n",stack[top]);
+    return stack[top--];
 }
-void print(){
-    if(isEmpty())
-    {
-        printf("Empty Stack");
-        return;
-    }
-    printf("Your Current Stack:\n");
-    for(int i=top;i>=0;i--)
-    {
-        printf("%d\n", stack[i]);
-    }
-}
+
 int main(){
     int i,size;
     printf("Enter array element size: ");
@@ -70,17 +56,19 @@ int main(){
     for(i=0;i<size;i++){
         printf("%d ",arr[i]);
     }
+    
     printf("\n\n");
     for(i=0;i<size;i++){
         push(arr[i]);
     }
-    print();
-    for(i=0;i<size;i++){
-        pop(arr[i]);
-    }
+    
+    for (int i=0; i<size; i++) {
+        arr[i] = pop();
+        }
+    
     
     printf("\nReverse Array element are: \n");
-    for(i=size-1;i>=0;i--){
+    for(i=0;i<size;i++){
         printf("%d ",arr[i]);
     }
     
