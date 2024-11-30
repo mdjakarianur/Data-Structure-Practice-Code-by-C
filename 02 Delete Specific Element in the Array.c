@@ -15,7 +15,7 @@ int main() {
     
     printf("\nEnter the position you want to delete: ");
     scanf("%d", &position);
-    for(i=position-1;i<=size-2;i++){
+    for(i=position-1;i<size-1;i++){
     arr[i]=arr[i+1];
     }
         arr[size-1]=0;
