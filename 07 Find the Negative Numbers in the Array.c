@@ -13,7 +13,7 @@ printf("The array elements are: \n");
     for(i=0;i<size;i++){
         printf("%d ", arr[i]); 
     }
-printf("\nThe odd mumbers are: ");  
+printf("\nThe negative mumbers are: ");  
 for(i=0; i<size; i++){  
 if(arr[i]<0){
      printf("%d ", arr[i]);
